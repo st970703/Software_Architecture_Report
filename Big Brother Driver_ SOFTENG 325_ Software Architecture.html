@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="scripts-not-loaded" lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Big Brother Driver: SOFTENG 325: Software Architecture</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico" />
+  <link rel="apple-touch-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/apple-touch-icon-585e5d997d.png" />
+  
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d4ef02f76d8a694bb6e6b0d26afbf4c0/variables-b59440e479f072e9f8e5fa783f2fcc29.css" />
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d4ef02f76d8a694bb6e6b0d26afbf4c0/new_styles_normal_contrast/bundles/common-de9877d2f0.css" />
+  <script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-64b21f7f37.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/lato-fontfaceobserver-11a14bc0b6.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488" />
+<link rel="manifest" href="/web-app-manifest/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00457c">
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css" />
+  
+  <link rel="stylesheet" media="all" href="https://instructure-uploads-apse2.s3-ap-southeast-2.amazonaws.com/account_61990000000000001/attachments/765125/uoa-canvas-custom.css?AWSAccessKeyId=AKIAIZAVS3WMRR54DT4Q&amp;Expires=1958156791&amp;Signature=4o4%2FSDkzvkMM1tfPn2BgOrtIENU%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0" />
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d4ef02f76d8a694bb6e6b0d26afbf4c0/variables-b59440e479f072e9f8e5fa783f2fcc29.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/vendor.bundle-61ccc0c12e.js" defer="defer"></script>
+<script src="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/Pacific/Auckland-bbf7d4b12e.js" defer="defer"></script>
+<script src="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/en_GB-31745e04c9.js" defer="defer"></script>
+<script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/moment/locale/en-gb.bundle-bd1e9cd25b.js" defer="defer"></script>
+<script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/appBootstrap.bundle-43015c2be3.js" defer="defer"></script>
+<script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/common.bundle-07f53473d3.js" defer="defer"></script>
+<script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/wiki_page_show.bundle-e73d25cbcd.js" defer="defer"></script>
+</head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-expanded context-course_23576">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1> To access this site, you must enable JavaScript.</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="#content" id="skip_navigation_link">Skip to content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Main navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.auckland.ac.nz/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="https://secure.gravatar.com/avatar/9bd941f539bb7fc74b68cddc9c633562?s=50&amp;d=https%3A%2F%2Fcanvas.auckland.ac.nz%2Fimages%2Fmessages%2Favatar-50.png" alt="Mike Lee" />
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.auckland.ac.nz/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z" /></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"/></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_groups_link" href="/groups" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--groups" viewBox="0 0 200 135"><path d="M134.5 129.4c0-1.1 0-19.8-6.2-31.1-4.5-8.5-16.4-12.4-35-19.2-1.7-.6-3.4-1.1-5.1-1.7v-8.5c5.6-5.1 8.5-12.4 8.5-20.3V29.4C96.6 13 83.6 0 67.2 0S37.9 13 37.9 29.4v19.2c0 7.3 3.4 14.7 8.5 20.3v8.5c-1.7.6-3.4 1.1-5.1 1.7-18.6 6.2-30.5 10.7-35 19.2C0 109.6 0 128.8 0 129.4c0 3.4 2.3 5.6 5.6 5.6h123.7c3.5 0 5.7-2.3 5.2-5.6zm-123.2-5.7c.6-5.6 1.7-14.7 3.4-19.8C17 98.8 30 94.3 43.5 89.8c2.8-1.1 5.6-2.3 9-3.4 2.3-.6 4-2.8 4-5.1V66.7c0-1.7-.6-3.4-1.7-4.5-4-3.4-6.2-8.5-6.2-13.6V29.4c0-10.2 7.9-18.1 18.1-18.1s18.1 7.9 18.1 18.1v19.2c0 5.1-2.3 10.2-6.2 13.6-1.1 1.1-1.7 2.8-1.7 4.5v14.7c0 2.3 1.7 4.5 4 5.1 2.8 1.1 6.2 2.3 9 3.4 13.6 5.1 26.6 9.6 28.8 14.1 2.8 5.1 4 13.6 4.5 19.8H11.3zM196 79.1c-2.8-6.2-11.3-9.6-22.6-13.6l-1.7-.6v-3.4c4.5-4 6.8-9.6 6.8-15.8V35c0-12.4-9.6-22-22-22s-22 10.2-22 22v10.7c0 6.2 2.3 11.9 6.8 15.8V65l-1.7.6c-7.3 2.8-13 4.5-16.9 7.3-1.7 1.1-2.3 2.8-2.3 5.1.6 1.7 1.7 3.4 3.4 4.5 7.9 4 12.4 7.3 14.1 10.7 2.3 4.5 4 10.2 5.1 18.1.6 2.3 2.8 4.5 5.6 4.5h45.8c3.4 0 5.6-2.8 5.6-5.1 0-3.9 0-24.3-4-31.6zm-42.9 25.4c-1.1-6.8-2.8-12.4-5.1-16.9-1.7-4-5.1-6.8-9.6-10.2 1.7-1.1 3.4-1.7 5.1-2.3l5.6-2.3c1.7-.6 3.4-2.8 3.4-5.1v-9.6c0-1.7-.6-3.4-2.3-4.5-2.8-1.7-4.5-5.1-4.5-8.5V34.5c0-6.2 4.5-10.7 10.7-10.7s10.7 5.1 10.7 10.7v10.7c0 3.4-1.7 6.2-4.5 8.5-1.1 1.1-2.3 2.8-2.3 4.5v10.2c0 2.3 1.1 4.5 3.4 5.1l5.6 2.3c6.8 2.3 15.3 5.6 16.4 7.9 1.7 2.8 2.8 12.4 2.8 20.9h-35.4z"/></svg>
+
+                </div>
+                <div class="menu-item__text">
+                  Groups
+                </div>
+              </a>
+            </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"/></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"/></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"/></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button
+              id="primaryNavToggle"
+              class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle"
+              aria-label="
+                Minimise global navigation"
+              title="
+                Minimise global navigation"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"/>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide courses navigation menu" title="Hide courses navigation menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="/"><span class="ellipsible">      <i class="icon-home"
+         title="My dashboard">
+        <span class="screenreader-only">My dashboard</span>
+      </i>
+</span></a></li><li><a href="/courses/23576"><span class="ellipsible">SOFTENG 325</span></a></li><li><a href="/courses/23576/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Big Brother Driver</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side"
+          class="ic-app-course-menu list-view"
+          style="display: block"
+          >
+              <span id="section-tabs-header-subtitle" class="ellipsis">2017 Semester Two</span>
+            <nav role="navigation" aria-label="Courses navigation menu"><ul id="section-tabs"><li class="section"><a href="/courses/23576" title="Home" class="home">Home</a></li><li class="section"><a href="/courses/23576/announcements" title="Announcements" class="announcements" aria-label="Course Announcements">Announcements</a></li><li class="section"><a href="/courses/23576/assignments" title="Assignments" class="assignments" aria-label="Course assignments">Assignments</a></li><li class="section"><a href="/courses/23576/discussion_topics" title="Discussions" class="discussions" aria-label="Course Discussions">Discussions</a></li><li class="section"><a href="/courses/23576/grades" title="Grades" class="grades" aria-label="Course grades">Grades</a></li><li class="section"><a href="/courses/23576/users" title="People" class="people">People</a></li><li class="section"><a href="/courses/23576/wiki" title="Pages" class="pages active">Pages</a></li><li class="section"><a href="/courses/23576/files" title="Files" class="files" aria-label="Course Files">Files</a></li><li class="section"><a href="/courses/23576/assignments/syllabus" title="Syllabus" class="syllabus">Syllabus</a></li><li class="section"><a href="/courses/23576/modules" title="Modules" class="modules">Modules</a></li><li class="section"><a href="/courses/23576/conferences" title="Conferences" class="conferences">Conferences</a></li><li class="section"><a href="/courses/23576/collaborations" title="Collaborations" class="collaborations">Collaborations</a></li><li class="section"><a href="/courses/23576/external_tools/8" title="Piazza" class="context_external_tool_8">Piazza</a></li><li class="section"><a href="/courses/23576/external_tools/10" title="Reading Lists" class="context_external_tool_10">Reading Lists</a></li><li class="section"><a href="/courses/23576/external_tools/146" title="Chat" class="context_external_tool_146">Chat</a></li><li class="section"><a href="/courses/23576/external_tools/1829" title="SET Evaluations" class="context_external_tool_1829">SET Evaluations</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+
+
+<div id="wiki_page_show"></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">5b00b1d7-8879-4320-9f84-d76de691e763</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be webcam-enabled. If you don&#39;t have a webcam on your computer, you can still record audio-only messages by first installing the Google Video Chat plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" class="btn">Install the video plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="#" class="cant_record_link">Don&#39;t have a webcam?</a>
+  </div>
+</div>
+  <div id='aria_alerts' class='hide-text affix' role="alert" aria-live="assertive"></div>
+  <div id='StudentTray__Container'></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"apse2.nv.instructuremedia.com","resource_domain":"apse2.nv.instructuremedia.com","rtmp_domain":"apse2.fms-prod.instructuremedia.com","partner_id":"2","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"YouTube","id":138,"url":"https://www.edu-apps.org/lti_public_resources/?tool_id=youtube","icon_url":"https://www.edu-apps.org/assets/lti_public_resources/youtube_icon.png","canvas_icon_class":null,"width":560,"height":600},{"name":"Vimeo","id":139,"url":"https://www.edu-apps.org/lti_public_resources/?tool_id=vimeo","icon_url":"https://www.edu-apps.org/assets/lti_public_resources/vimeo_icon.png","canvas_icon_class":null,"width":560,"height":600},{"name":"Khan Academy","id":140,"url":"https://www.edu-apps.org/lti_public_resources/?tool_id=khan_academy","icon_url":"https://www.edu-apps.org/assets/lti_public_resources/khan_academy_icon.png","canvas_icon_class":null,"width":560,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config":"d4ef02f76d8a694bb6e6b0d26afbf4c0","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d4ef02f76d8a694bb6e6b0d26afbf4c0/variables-b59440e479f072e9f8e5fa783f2fcc29.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d4ef02f76d8a694bb6e6b0d26afbf4c0/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-542d1c188c.css","current_user_id":"15905","current_user":{"id":"15905","display_name":"Mike Lee","avatar_image_url":"https://secure.gravatar.com/avatar/9bd941f539bb7fc74b68cddc9c633562?s=50\u0026d=https%3A%2F%2Fcanvas.auckland.ac.nz%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https://canvas.auckland.ac.nz/about/15905"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster76-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":61990000000000001,"k12":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":false,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/5b00b1d7-8879-4320-9f84-d76de691e763?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNWIwMGIxZDctODg3OS00MzIwLTlmODQtZDc2ZGU2OTFlNzYzIiwidSI6NjE5OTAwMDAwMDAwMTU5MDUsImMiOiIyMDE3LTEwLTAxVDA3OjUxOjEwLjA4WiJ9.5MswaTaS_IVJgEHm80fOo63kCRRmUb7y21v5h3j0LX4","context_asset_string":"course_23576","ping_url":"https://canvas.auckland.ac.nz/api/v1/courses/23576/ping","TIMEZONE":"Pacific/Auckland","CONTEXT_TIMEZONE":"Pacific/Auckland","LOCALE":"en-GB","BIGEASY_LOCALE":"en_GB","FULLCALENDAR_LOCALE":"en-gb","MOMENT_LOCALE":"en-gb","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/23576/pages","WIKI_PAGE":{"title":"Big Brother Driver","created_at":"2017-09-21T02:02:03Z","url":"big-brother-driver","editing_roles":"teachers","page_id":"79121","last_edited_by":{"id":"16768","display_name":"Ewan Tempero","avatar_image_url":"https://secure.gravatar.com/avatar/894005df27a8d063aa03dd1544fcd479?s=50\u0026d=https%3A%2F%2Fcanvas.auckland.ac.nz%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https://canvas.auckland.ac.nz/courses/23576/users/16768"},"published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.auckland.ac.nz/courses/23576/pages/big-brother-driver","updated_at":"2017-09-21T02:02:03Z","locked_for_user":false,"body":"\u003cp\u003eThis provides some details of the requirements for a system. The real\r\nrequirements for this kind of system would fill a very large book, so what\r\nis here is necessarily incomplete. There is enough detail to provide a\r\nrealistic situation for the assignment, but in the case where you need more\r\ndetails, feel free to make some up. If you do, \u003cem\u003estate them clearly\u003c/em\u003e\r\nso that the markers know what assumptions you are making. Do not make up\r\ndetails that mean a solution becomes trivial. It would be wise to confirm\r\nwith me any assumptions you make.\u003c/p\u003e\r\n\r\n\u003cp\u003eIt is quite likely that clarification will be needed as questions come up\r\nthat I haven't thought of. Feel free to ask.\u003c/p\u003e\r\n\r\n\u003ch3\u003eOverview\u003c/h3\u003e\r\n\r\n\u003cp\u003eFollowing the stunning success of \u003ca href=\"https://www.cs.auckland.ac.nz/en/about/ourresearch/participate-in-our-research.html\"\u003eBackPocketDriver\u003c/a\u003e the\r\n\u003ca href=\"https://www.nzta.govt.nz\"\u003eNew Zealand Transport Agency (NZTA)\u003c/a\u003e, in\r\nconjunction with the \u003ca href=\"http://www.police.govt.nz\"\u003eNew Zealand Police\u003c/a\u003e, have decided to require that all\r\nvehicles on New Zealand public roads must have an occupant with a mobile\r\ndevice with a similar system installed. This system will track each vehicle,\r\nprovide a report of the driver's behaviour at the end of each journey to the\r\n\u003ca href=\"https://www.nzta.govt.nz\"\u003eNZTA\u003c/a\u003e, flag drivers that drive\r\ndangerously in real-time to \u003ca href=\"http://www.police.govt.nz\"\u003ePolice\u003c/a\u003e,\r\nand other such functionality (more details below).  Your\r\norganisation, \u003cstrong\u003eOceania Central Design\u003c/strong\u003e (OCD), has been\r\ncontracted to create the system, which is to be called\r\n \u003cb\u003e\u003ca href=\"https://en.wikipedia.org/wiki/Big_Brother_(Nineteen_Eighty-Four)\"\u003eBig Brother\u003c/a\u003e Driver (BBD)\u003c/b\u003e.\r\n\r\n\u003c/p\u003e\u003cp\u003eYou are to develop an architecture for BBD. The system consists of the\r\napp that is installed on the mobile devices (BBD-V) for use recording the\r\njourneys of vehicles, an app for use by relevant users for accessing the\r\njourney information (BBD-M), and a central service for managing and\r\ndistributing the information gathered by the apps (BBD-Ops).\r\n\r\n\u003c/p\u003e\u003cp\u003eThe functionality BBD has to support includes:\r\n\u003c/p\u003e\u003cul\u003e\r\n\u003cli\u003e At the end of each journey a report has to be able to be provided by\r\nBDD-Ops containing such information as: the length of the journey, the time\r\ntaken, the maximum acceleration, the number of unnecessary lane changes, the\r\namount of time spent over the speed limit, and the number of times the\r\ncentre-line is crossed when not at an intersection.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e Some drivers (e.g. those required ordered by the Court and those on a\r\nLearner or Restricted license) are required to register the\r\nbeginning of each journey via BBD-V. These drivers can be tracked in\r\nreal-time by the police and by parents of drivers on a Learner or Restricted\r\nLicense under the age of 17.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e If a vehicle is driven erractically or with excessive speed, its\r\ndetails are to be immediately reported to the Police.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e Provision has to be made to allow changes to the speed limit and road\r\nlayout (what lanes there are and where intersections are) both for temporary\r\nroad-works and permenant changes.\r\n\u003c/li\u003e\n\u003c/ul\u003e\r\n\r\n\u003cp\u003eBBD has to support other functionality necessary for operation, such as\r\nsupporting the on-line registration of the vehicles (or their occupants at\r\nleast)\u003c/p\u003e\r\n\r\n\u003cp\u003eOCD is responsible for the software that runs on the mobile devices, the\r\npart of the system responsible for registrations, creating and providing\r\naccess to trip reports, and other kinds of reporting (e.g. number of trips a\r\nday per region).\u003c/p\u003e\r\n\r\n\r\n\u003ch3\u003eSystem Architecture\u003c/h3\u003e\r\n\r\n\u003cp\u003eThere are various aspects of the system architecture that can be\r\nassumed.\u003c/p\u003e\r\n\r\n\u003cul\u003e\r\n\u003cli\u003e This is all going to be paid by the tax-payer, so while a reasonable\r\namount of money is available, you cannot assume unlimited, or even a huge\r\namount, of resources (e.g. a million dollar server farm).\u003c/li\u003e\r\n\r\n\u003cli\u003e Location is a fairly important part of this sytem, but determining\r\nlocation accurately is quite difficult. We will assume that location of a\r\nvehicle can be determined within 1 metre\r\nsome \u003ca href=\"http://tvtropes.org/pmwiki/pmwiki.php/Main/ClarkesThirdLaw\"\u003esufficiently\r\nadvanced GPS technology\u003c/a\u003e.\u003c/li\u003e\r\n\r\n\u003cli\u003eNZTA has done a deal with an unnamed \"tracking solutions\" company\r\n\u003cb\u003eWKWYL\u003c/b\u003e that provides an API that will provide real-time details about\r\nthe speed limit and road-layout for the a specified GPS location. These\r\ndetails are delivered formatted in JSON, taking not more than 512 bytes.\r\n\u003c/li\u003e\n\u003c/ul\u003e\r\n\r\n\u003ch3\u003eNotes\u003c/h3\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eA journey begins when the vehicle starts moving on a public road and\r\nends when it is no longer on a public road, or is stationary on the side of\r\na public road (i.e. parked).\r\n\r\n\u003c/li\u003e\n\u003cli\u003e You should consider how much data needs to be sent around the\r\nsystem. Is it uniformly spread over all areas or will there be bursts of\r\nactivity?\u003c/li\u003e\r\n\r\n\u003cli\u003e The mobile devices are expected to communicate using the owner's data\r\nplans.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e It is not a requirement that the driver having the mobile device with\r\nthe App installed, just that someone in the vehicle does.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e According to the\r\n\u003ca href=\"http://www.transport.govt.nz/ourwork/tmif/transport-volume/tv004/\"\u003eMinistry of Transport\u003c/a\u003e there are about 4 millions road vehicles in New Zeland.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e A vehicle travelling at 100kph travels about 27.7 metres in 1 second.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e Assume that the average journey time is 20 minutes and that each\r\nvehicle makes on average 1 journey per day.\r\n\r\n\u003c/li\u003e\n\u003cli\u003e Reporting to the Police is done via a RESTful API that the Police IT\r\nsystem provides for such things.\r\n\u003c/li\u003e\n\u003c/ul\u003e\r\n"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/23576/pages/big-brother-driver","WIKI_PAGE_EDIT_PATH":"/courses/23576/pages/big-brother-driver/edit","WIKI_PAGE_HISTORY_PATH":"/courses/23576/pages/big-brother-driver/revisions","COURSE_ID":"23576","MODULES_PATH":"/courses/23576/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":true,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/navigation_header.bundle-9669f80a51.js" defer="defer"></script>
+<script src="https://instructure-uploads-apse2.s3-ap-southeast-2.amazonaws.com/account_61990000000000001/attachments/1409856/prod-uoa-canvas-custom-GA.js" defer="defer"></script>
+
+</div> <!-- #application -->
+</body>
+</html>
