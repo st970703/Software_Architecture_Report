@@ -27,3 +27,8 @@ hs_err_pid*
 # PowerPoint temporary
 ~$*.ppt*
 ~WRL3621.tmp
+
+
+
+
+*.tmp
